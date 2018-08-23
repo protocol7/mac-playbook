@@ -15,6 +15,7 @@
       - reattach-to-user-namespace
       - tmux
       - tree
+      - watch
   - name: macvim
     homebrew:
       name: macvim
