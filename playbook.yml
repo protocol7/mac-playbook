@@ -13,14 +13,17 @@
       name: "{{item}}"
       state: latest
     with_items:
+      - checkstyle
       - dos2unix
       - git
       - gnupg
+      - google-java-format
       - gradle
       - htop
       - maven
       - npm
       - pipenv
+      - pmd
       - protobuf
       - pstree
       - reattach-to-user-namespace
@@ -44,6 +47,7 @@
       - airflow
       - alfred
       - android-studio
+      - daisydisk
       - docker
       - dropbox
       - google-chrome-canary
