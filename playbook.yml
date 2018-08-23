@@ -1,5 +1,9 @@
 - hosts: mac
   tasks:
+    # Adding a tap for https://github.com/Homebrew/homebrew-cask-versions
+  - name: cask-versions tap
+    homebrew_tap:
+      name: homebrew/cask-versions
   - name: homebrew
     homebrew:
       name: "{{item}}"
@@ -27,6 +31,7 @@
       name: "{{item}}"
       state: latest
     with_items:
+      - 1password6
       - airflow
       - alfred
       - android-studio
