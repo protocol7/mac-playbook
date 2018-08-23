@@ -13,16 +13,20 @@
       name: "{{item}}"
       state: latest
     with_items:
+      - dos2unix
       - git
+      - gnupg
       - gradle
       - htop
       - maven
       - npm
       - pipenv
+      - protobuf
       - pstree
       - reattach-to-user-namespace
       - tmux
       - tree
+      - unrar
       - watch
       - wget
       - spotify/sptaps/hmtools
