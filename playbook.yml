@@ -34,3 +34,10 @@
       - trello
       - vlc
       - whatsapp
+  - name: npm
+    npm:
+      name: "{{item}}"
+      state: latest
+      global: yes
+    with_items:
+      - git-open
