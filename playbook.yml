@@ -8,6 +8,7 @@
       - git
       - gradle
       - htop
+      - maven
       - npm
       - reattach-to-user-namespace
       - tmux
