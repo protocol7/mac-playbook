@@ -66,3 +66,8 @@
     git:
       repo: https://github.com/tmux-plugins/tpm
       dest: ~/.tmux/plugins/tpm
+  - name: dotfiles checkout
+    shell: 'git init && git remote add origin git@github.com:protocol7/dotfiles.git && git fetch && git checkout master'
+    args:
+      chdir: ~/
+      creates: ~/.git/
