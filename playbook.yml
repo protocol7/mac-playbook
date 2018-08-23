@@ -16,6 +16,7 @@
       - tmux
       - tree
       - watch
+      - wget
   - name: macvim
     homebrew:
       name: macvim
