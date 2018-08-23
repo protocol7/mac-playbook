@@ -1,0 +1,36 @@
+- hosts: mac
+  tasks:
+  - name: homebrew
+    homebrew:
+      name: "{{item}}"
+      state: latest
+    with_items:
+      - gradle
+      - htop
+      - npm
+      - reattach-to-user-namespace
+      - tmux
+      - tree
+  - name: macvim
+    homebrew:
+      name: macvim
+      state: latest
+      install_options: with-override-system-vim
+  - name: cask
+    homebrew_cask:
+      name: "{{item}}"
+      state: latest
+    with_items:
+      - airflow
+      - alfred
+      - android-studio
+      - docker
+      - dropbox
+      - google-chrome
+      - iterm2
+      - slack
+      - slate
+      - spotify
+      - trello
+      - vlc
+      - whatsapp
