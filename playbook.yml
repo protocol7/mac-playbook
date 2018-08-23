@@ -11,6 +11,7 @@
       - maven
       - npm
       - pipenv
+      - pstree
       - reattach-to-user-namespace
       - tmux
       - tree
