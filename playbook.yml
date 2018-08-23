@@ -10,6 +10,7 @@
       - htop
       - maven
       - npm
+      - pipenv
       - reattach-to-user-namespace
       - tmux
       - tree
