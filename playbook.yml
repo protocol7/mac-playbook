@@ -47,6 +47,7 @@
       - trello
       - vlc
       - whatsapp
+      - wireshark
   - name: npm
     npm:
       name: "{{item}}"
