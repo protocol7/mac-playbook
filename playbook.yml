@@ -77,3 +77,7 @@
     args:
       chdir: ~/
       creates: ~/.git/
+  - name: src dir
+    file: path=~/src state=directory
+  - name: sp src dir
+    file: path=~/src/sp state=directory
