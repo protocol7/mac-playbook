@@ -37,8 +37,11 @@
       - android-studio
       - docker
       - dropbox
-      - google-chrome
-      - iterm2
+      - google-chrome-canary
+      - intellij-idea-ce
+      - iterm2-beta
+      - java
+      - java8
       - slack
       - slate
       - spotify
