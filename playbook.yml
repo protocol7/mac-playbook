@@ -4,6 +4,10 @@
   - name: cask-versions tap
     homebrew_tap:
       name: homebrew/cask-versions
+  - name: spotify tap
+    homebrew_tap:
+      name: spotify/sptaps
+      url: git@ghe.spotify.net:shared/homebrew-spotify.git
   - name: homebrew
     homebrew:
       name: "{{item}}"
@@ -21,6 +25,7 @@
       - tree
       - watch
       - wget
+      - spotify/sptaps/hmtools
   - name: macvim
     homebrew:
       name: macvim
@@ -62,6 +67,7 @@
     git:
       repo: https://github.com/VundleVim/Vundle.vim.git
       dest: ~/.vim/bundle/Vundle.vim
+      # run vim +PluginInstall +qall
   - name: TPM
     git:
       repo: https://github.com/tmux-plugins/tpm
