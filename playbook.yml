@@ -27,6 +27,7 @@
       - protobuf
       - pstree
       - reattach-to-user-namespace
+      - rust
       - tmux
       - tree
       - unrar
