@@ -53,6 +53,7 @@
       - docker
       - dropbox
       - google-chrome-canary
+      - google-backup-and-sync
       - intellij-idea-ce
       - iterm2-beta
       - java
