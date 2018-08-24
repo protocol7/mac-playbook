@@ -13,6 +13,7 @@
       name: "{{item}}"
       state: latest
     with_items:
+      - bash
       - checkstyle
       - dos2unix
       - git
