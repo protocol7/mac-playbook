@@ -128,17 +128,30 @@
        state: present
     when: ansible_hostname != computername
 
+  - name: check standby delay
+    shell: pmset -g | grep standbydelay | grep 86400
+    register: standbydelay
+    ignore_errors: true
+  - name: Set standby delay to 24 hours (default is 1 hour)
+    shell: pmset -a standbydelay 86400
+    when: standbydelay.rc != 0
+    become: yes
+
+  # Disable hibernate
+  - name: check hibernatemode
+    shell: pmset -g | grep hibernatemode | grep 0
+    register: hibernatemode
+    ignore_errors: true
+  - name: Disable hibernation (speeds up entering sleep mode)
+    shell: pmset -a hibernatemode 0
+    when: hibernatemode.rc != 0
+    become: yes
+
   - name: disable transparency in the menu bar and elsewhere
-    osx_defaults:
-       domain: com.apple.universalaccess
-       key: reduceTransparency
-       type: bool
-       value: true
+    osx_defaults: domain=com.apple.universalaccess key=reduceTransparency type=bool value=true
 
   - name: always show scrollbars
-    osx_defaults:
-       key: AppleShowScrollBars
-       value: "Always"
+    osx_defaults: key=AppleShowScrollBars value=Always
 
   - name: Expand save panel by default 1
     osx_defaults: key=NSNavPanelExpandedStateForSaveMode type=bool value=true
@@ -162,8 +175,13 @@
   - name: Disable Resume system-wide
     osx_defaults: domain=com.apple.systempreferences key=NSQuitAlwaysKeepsWindows type=bool value=false
 
-  - name: Disable Resume system-wide
-    osx_defaults: domain=com.apple.systempreferences key=NSQuitAlwaysKeepsWindows type=bool value=false
+  - name: Set a keyboard repeat rate 1
+    osx_defaults: key=KeyRepeat type=int value=2
+  - name: Set a keyboard repeat rate 2
+    osx_defaults: key=InitialKeyRepeat type=int value=15
+
+  - name: Disable automatic capitalization as it’s annoying when typing code
+    osx_defaults: key=NSAutomaticCapitalizationEnabled type=bool value=false
 
   - name: Disable automatic capitalization as it’s annoying when typing code
     osx_defaults: key=NSAutomaticCapitalizationEnabled type=bool value=false
@@ -174,6 +192,13 @@
   - name: Disable smart quotes as they’re annoying when typing code
     osx_defaults: key=NSAutomaticQuoteSubstitutionEnabled type=bool value=false
 
+  # Screen
+  - name: Require password immediately after sleep or screen saver begins 1
+    osx_defaults: domain=com.apple.screensaver key=askForPassword type=int value=1
+  - name: Require password immediately after sleep or screen saver begins 2
+    osx_defaults: domain=com.apple.screensaver key=askForPasswordDelay type=int value=0
+
+
   - name: Create Screenshot directory
     file: path=~/Screenshots state=directory
   - name: Save screenshots in Screenshots directory
@@ -182,6 +207,7 @@
   - name: Disable shadow in screenshots
     osx_defaults: domain=com.apple.screencapture key=disable-shadow type=bool value=true
 
+  # Finder
   - name: Finder - allow quitting doing so will also hide desktop icons
     osx_defaults: domain=com.apple.finder key=QuitMenuItem type=bool value=true
 
