@@ -8,6 +8,9 @@
     homebrew_tap:
       name: spotify/sptaps
       url: git@ghe.spotify.net:shared/homebrew-spotify.git
+  - name: spotify public tap
+    homebrew_tap:
+      name: spotify/public
   - name: homebrew
     homebrew:
       name: "{{item}}"
@@ -37,6 +40,7 @@
       - unrar
       - watch
       - wget
+      - spotify/public/helios
       - spotify/sptaps/hmtools
   - name: macvim
     homebrew:
