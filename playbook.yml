@@ -21,6 +21,7 @@
       - git
       - gnupg
       - google-java-format
+      - grep
       - gradle
       - htop
       - maven
