@@ -21,14 +21,17 @@
       - checkstyle
       - dockutil
       - dos2unix
+      - ghostscript # TWP
       - git
       - gnupg
       - google-java-format
       - grep
       - gradle
       - htop
+      - imagemagick # TWP
       - maven
       - npm
+      - pandoc # TWP
       - pipenv
       - pmd
       - protobuf
