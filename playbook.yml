@@ -222,6 +222,11 @@
   - name: Finder - allow quitting doing so will also hide desktop icons
     osx_defaults: domain=com.apple.finder key=QuitMenuItem type=bool value=true
 
+  - name: Finder - new windows open on Desktop 1
+    osx_defaults: domain=com.apple.finder key=NewWindowTarget value=PfDe
+  - name: Finder - new windows open on Desktop 2
+    osx_defaults: domain=com.apple.finder key=NewWindowTargetPath value="file://${HOME}/Desktop/"
+
   - name: Finder - disable window animations and Get Info animations
     osx_defaults: domain=com.apple.finder key=DisableAllAnimations type=bool value=true
 
