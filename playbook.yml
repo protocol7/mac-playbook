@@ -29,6 +29,7 @@
       - gradle
       - htop
       - imagemagick # TWP
+      - jq
       - maven
       - npm
       - pandoc # TWP
