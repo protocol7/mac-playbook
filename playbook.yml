@@ -64,6 +64,7 @@
       - daisydisk
       - docker
       - dropbox
+      - google-cloud-sdk
       - google-chrome-canary
       - google-backup-and-sync
       - intellij-idea-ce
