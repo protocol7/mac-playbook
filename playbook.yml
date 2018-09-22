@@ -44,6 +44,7 @@
       - unrar
       - watch
       - wget
+      - yarn
       - spotify/public/helios
       - spotify/sptaps/hmtools
   - name: macvim
