@@ -78,6 +78,7 @@
       - java8
       - java10
       - pomello
+      - sb
       - slack
       - slate
       - spotify
