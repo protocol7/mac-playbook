@@ -20,6 +20,7 @@
       - bat
       - checkstyle
       - clojure
+      - cmake
       - dockutil
       - dos2unix
       - ghostscript # TWP
