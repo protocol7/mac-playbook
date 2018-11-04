@@ -26,6 +26,7 @@
       - ghostscript # TWP
       - git
       - gnupg
+      - go
       - google-java-format
       - grep
       - gradle
