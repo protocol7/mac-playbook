@@ -19,6 +19,7 @@
       - bash
       - bat
       - checkstyle
+      - clojure
       - dockutil
       - dos2unix
       - ghostscript # TWP
@@ -30,6 +31,7 @@
       - htop
       - imagemagick # TWP
       - jq
+      - leiningen
       - maven
       - npm
       - pandoc # TWP
