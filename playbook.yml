@@ -113,6 +113,20 @@
       repo: https://github.com/tmux-plugins/tpm
       dest: ~/.tmux/plugins/tpm
 
+  - name: rust
+    shell: curl https://sh.rustup.rs -sSf | sh -s -- -y
+    args:
+      creates: ~/.cargo/
+      warn: false
+  - name: cargo list
+    command: cargo install --list
+    register: cargo_list
+  - name: cargo
+    command: cargo install "{{item}}"
+    when: (item | string) not in cargo_list.stdout
+    with_items:
+      - loc
+
   # Checkout dotfiles
   - name: dotfiles checkout
     shell: 'git init && git remote add origin git@github.com:protocol7/dotfiles.git && git fetch && git reset origin/master && git checkout -t origin/master'
@@ -384,9 +398,3 @@
     osx_defaults: domain=org.m0k.transmission key=DownloadAsk type=bool value=true
   - name: Don’t prompt for confirmation before downloading 2
     osx_defaults: domain=org.m0k.transmission key=MagnetOpenAsk type=bool value=true
-
-  - name: rust
-    shell: curl https://sh.rustup.rs -sSf | sh -s -- -y
-    args:
-      creates: ~/.cargo/
-      warn: false
