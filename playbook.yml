@@ -43,6 +43,7 @@
       - protobuf
       - pstree
       - reattach-to-user-namespace
+      - terraform
       - tmux
       - tree
       - unrar
