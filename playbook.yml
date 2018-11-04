@@ -95,6 +95,7 @@
     when: (item | string) not in mas_list.stdout
     with_items:
       - 1278508951 # Trello
+      - 497799835 # Xcode
   - name: npm
     npm:
       name: "{{item}}"
