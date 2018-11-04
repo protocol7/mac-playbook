@@ -34,6 +34,7 @@
       - imagemagick # TWP
       - jq
       - leiningen
+      - mas
       - maven
       - npm
       - pandoc # TWP
