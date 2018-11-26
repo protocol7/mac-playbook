@@ -69,6 +69,7 @@
       - android-studio
       - basictex # TWP
       - daisydisk
+      - deckset
       - docker
       - dropbox
       - google-cloud-sdk
