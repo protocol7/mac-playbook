@@ -36,6 +36,7 @@
       - leiningen
       - mas
       - maven
+      - ngrep
       - npm
       - pandoc # TWP
       - pipenv
