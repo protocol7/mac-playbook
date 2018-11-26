@@ -67,6 +67,7 @@
       - airflow
       - alfred
       - android-studio
+      - basictex # TWP
       - daisydisk
       - docker
       - dropbox
