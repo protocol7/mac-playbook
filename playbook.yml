@@ -122,6 +122,8 @@
     args:
       creates: ~/.cargo/
       warn: false
+  - name: rustup
+    shell: rustup update
   - name: cargo list
     command: cargo install --list
     register: cargo_list
