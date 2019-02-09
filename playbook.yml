@@ -33,6 +33,7 @@
       - htop
       - imagemagick # TWP
       - jq
+      - kubectx
       - leiningen
       - mas
       - maven
