@@ -87,6 +87,8 @@
       - vlc
       - whatsapp
       - wireshark
+  - name: gcloud
+    shell: gcloud components update
   - name: appstore list
     command: mas list
     register: mas_list
