@@ -35,6 +35,7 @@
       - jq
       - kubectx
       - leiningen
+      - macvim
       - mas
       - maven
       - ngrep
@@ -54,11 +55,6 @@
       - yarn
       - spotify/public/helios
       - spotify/sptaps/hmtools
-  - name: macvim
-    homebrew:
-      name: macvim
-      state: latest
-      install_options: with-override-system-vim
   - name: cask
     homebrew_cask:
       name: "{{item}}"
