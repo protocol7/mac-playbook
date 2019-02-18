@@ -107,10 +107,10 @@
       global: yes
     with_items:
       - git-open
-  - name: pip spotify
-    command: pip install --index-url=https://pypi.spotify.net/spotify/production "{{item}}"
-    with_items:
-      - spotify-developer-cli
+  - pip:
+      name: spotify-developer-cli
+      state: latest
+      extra_args: --index-url=https://pypi.spotify.net/spotify/production
   - name: vundle
     git:
       repo: https://github.com/VundleVim/Vundle.vim.git
