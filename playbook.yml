@@ -21,6 +21,7 @@
       - checkstyle
       - clojure
       - cmake
+      - cookiecutter
       - dockutil
       - dos2unix
       - ghostscript # TWP
