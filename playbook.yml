@@ -90,6 +90,8 @@
       - wireshark
   - name: gcloud
     shell: gcloud components update
+  - name: gcloud beta
+    shell: gcloud components install beta
   - name: appstore list
     command: mas list
     register: mas_list
