@@ -103,6 +103,7 @@
       - 1278508951 # Trello
       - 497799835 # Xcode
       - 1191449274 # ToothFairy
+      - 403504866 # PCalc
   - name: npm
     npm:
       name: "{{item}}"
