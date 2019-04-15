@@ -44,6 +44,7 @@
       - ngrep
       - npm
       - pandoc # TWP
+      - parallel
       - pipenv
       - pmd
       - protobuf
