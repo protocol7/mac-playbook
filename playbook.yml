@@ -30,6 +30,7 @@
       - go
       - google-java-format
       - gradle
+      - graphviz
       - grep
       - htop
       - imagemagick # TWP
