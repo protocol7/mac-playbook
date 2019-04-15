@@ -29,8 +29,8 @@
       - gnupg
       - go
       - google-java-format
-      - grep
       - gradle
+      - grep
       - htop
       - imagemagick # TWP
       - jq
