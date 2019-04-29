@@ -59,6 +59,7 @@
       - airflow
       - alfred
       - android-studio
+      - bartender
       - basictex # TWP
       - daisydisk
       - deckset
