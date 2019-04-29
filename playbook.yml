@@ -4,13 +4,6 @@
   - name: cask-versions tap
     homebrew_tap:
       name: homebrew/cask-versions
-  - name: spotify tap
-    homebrew_tap:
-      name: spotify/sptaps
-      url: git@ghe.spotify.net:shared/homebrew-spotify.git
-  - name: spotify public tap
-    homebrew_tap:
-      name: spotify/public
   - name: homebrew
     homebrew:
       name: "{{item}}"
@@ -57,8 +50,6 @@
       - watch
       - wget
       - yarn
-      - spotify/public/helios
-      - spotify/sptaps/hmtools
   - name: cask
     homebrew_cask:
       name: "{{item}}"
