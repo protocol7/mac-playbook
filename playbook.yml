@@ -413,6 +413,8 @@
   # Transmission
   - name: Use `~/Downloads` to store completed downloads
     osx_defaults: domain=org.m0k.transmission key=DownloadLocationConstant type=bool value=true
+  - name: Use `~/Downloads/Torrent` to store incomplete downloads
+    osx_defaults: domain=org.m0k.transmission key=IncompleteDownloadFolder value="~/Downloads/Torrents"
 
   - name: Don’t prompt for confirmation before downloading 1
     osx_defaults: domain=org.m0k.transmission key=DownloadAsk type=bool value=true
