@@ -76,6 +76,7 @@
       - java
       - java8
       - java11
+      - polar-bookshelf
       - pomello
       - sb
       - slack
