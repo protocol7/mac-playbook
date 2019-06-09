@@ -68,7 +68,6 @@
       - daisydisk
       - deckset
       - docker
-      - dropbox
       - google-cloud-sdk
       - google-chrome-canary
       - google-backup-and-sync
