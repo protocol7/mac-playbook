@@ -1,8 +1,5 @@
 [mac]
 localhost ansible_connection=local
 
-[albin]
-localhost ansible_connection=local computername=albin
-
-[filip]
-localhost ansible_connection=local computername=filip
+[kids]
+localhost ansible_connection=local
