@@ -147,6 +147,10 @@
     command: cargo install-update -a
     when: '"Yes" in cargo_update_list.stdout'
 
+  - gem:
+      name: travis
+      state: latest
+
   # Checkout dotfiles
   - name: dotfiles checkout
     shell: 'git init && git remote add origin git@github.com:protocol7/dotfiles.git && git fetch && git reset origin/master && git checkout -t origin/master'
