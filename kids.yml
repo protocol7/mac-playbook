@@ -79,9 +79,6 @@
   - name: Chrome as default
     shell: defaultbrowser chrome
 
-  - name: disable transparency in the menu bar and elsewhere
-    osx_defaults: domain=com.apple.universalaccess key=reduceTransparency type=bool value=true
-
   - name: always show scrollbars
     osx_defaults: key=AppleShowScrollBars value=Always
 
