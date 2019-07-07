@@ -53,6 +53,12 @@
       - Launchpad
       - Safari
       - Mail
+      - Kontakter
+      - Kalender
+      - Påminnelser
+      - Kartor
+      - Bilder
+      - iTunes
 
   - name: dock additions
     shell: dockutil --add "{{item}}"
