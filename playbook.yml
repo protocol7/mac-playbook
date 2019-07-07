@@ -430,7 +430,7 @@
   - name: Chrome extension dir
     file: path="~/Library/Application Support/Google/Chrome Canary/External Extensions" state=directory
 
-  - name: Chrome - create json file to install extensions for all users
+  - name: Chrome extensions
     template:
       src: templates/chrome-extensions.json.j2
       dest: "~/Library/Application Support/Google/Chrome Canary/External Extensions/{{ item.id }}.json"
