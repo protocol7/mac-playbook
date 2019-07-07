@@ -59,7 +59,7 @@
       name: "{{item}}"
       state: latest
     with_items:
-      - 1password6
+      - 1password
       - airflow
       - alfred
       - android-studio
