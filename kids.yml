@@ -67,6 +67,8 @@
         path: "/Applications/Google Chrome.app/"
       - name: iTerm
         path: "/Applications/iTerm.app/"
+      - name: Minecraft
+        path: "/Applications/Minecraft.app/"
       - name: PyCharm
         path: "/Applications/PyCharm.app/"
       - name: Spotify
