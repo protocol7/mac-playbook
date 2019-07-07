@@ -8,6 +8,8 @@
     homebrew:
       name:
         - bash
+        - defaultbrowser
+        - dockutil
         - git
         - npm
         - pipenv
@@ -43,3 +45,19 @@
   # Create basic dirs
   - name: src dir
     file: path=~/Desktop/kod state=directory
+
+  - name: dock clean up
+    shell: dockutil --remove "{{item}}"
+    with_items:
+      - Siri
+      - Launchpad
+      - Safari
+      - Mail
+
+  - name: dock additions
+    shell: dockutil --add "{{item}}"
+    with_items:
+      - "/Applications/Google Chrome.app/"
+
+  - name: Chrome as default
+    shell: defaultbrowser -set chrome
