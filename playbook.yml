@@ -431,7 +431,7 @@
   - name: Chrome - create json file to install extensions for all users
     template:
       src: templates/chrome-extensions.json.j2
-      dest: "/Users/ngn/Library/Application Support/Google/Chrome Canary/External Extensions/{{ item.id }}.json"
+      dest: "~/Library/Application Support/Google/Chrome Canary/External Extensions/{{ item.id }}.json"
     with_items:
       - name: quick-tabs
         id: jnjfeinjfmenlddahdjdmgpbokiacbbb
