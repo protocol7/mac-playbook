@@ -426,6 +426,7 @@
   - name: Don’t prompt for confirmation before downloading 2
     osx_defaults: domain=org.m0k.transmission key=MagnetOpenAsk type=bool value=true
 
+  # Configure Chrome
   - name: Chrome extension dir
     file: path="~/Library/Application Support/Google/Chrome Canary/External Extensions" state=directory
 
@@ -434,16 +435,16 @@
       src: templates/chrome-extensions.json.j2
       dest: "~/Library/Application Support/Google/Chrome Canary/External Extensions/{{ item.id }}.json"
     with_items:
-      - name: quick-tabs
-        id: jnjfeinjfmenlddahdjdmgpbokiacbbb
       - name: EditThisCookie
         id: fngmhnnpilhplaeedifhccceomclgfbg
-      - name: Picture-in-picture
-        id: hkgfoiooedgoejojocmhlaklaeopbecg
       - name: Google Docs offline
         id: ghbmnnjooekpmoecnnnilnnbdlolhkhi
+      - name: Picture-in-picture
+        id: hkgfoiooedgoejojocmhlaklaeopbecg
       - name: Polar
         id: jkfdkjomocoaljglgddnmhcbolldcafd
+      - name: quick-tabs
+        id: jnjfeinjfmenlddahdjdmgpbokiacbbb
       - name: Save to Pocket
         id: niloccemoadcdkdjlinkgdfekeahmflj
       - name: ublock
