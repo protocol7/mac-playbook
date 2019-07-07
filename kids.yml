@@ -60,4 +60,4 @@
       - "/Applications/Google Chrome.app/"
 
   - name: Chrome as default
-    shell: defaultbrowser -set chrome
+    shell: defaultbrowser chrome
