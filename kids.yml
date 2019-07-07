@@ -151,3 +151,54 @@
 
   - name: Disable the warning before emptying the Trash
     osx_defaults: domain=com.apple.finder key=WarnOnEmptyTrash type=bool value=false
+
+
+  # Mouse
+  - name: Enable right-client
+    osx_defaults: domain=com.apple.driver.AppleBluetoothMultitouch.mouse key=MouseButtonMode value=TwoButton
+
+  # iTerm
+  - name: Don’t display the annoying prompt when quitting iTerm
+    osx_defaults: domain=com.googlecode.iterm2 key=PromptOnQuit type=bool value=false
+
+  # Activity Monitor
+  - name: Show the main window when launching Activity Monitor
+    osx_defaults: domain=com.apple.ActivityMonitor key=OpenMainWindow type=bool value=true
+
+  - name: Sort Activity Monitor results by CPU usage 1
+    osx_defaults: domain=com.apple.ActivityMonitor key=SortColumn value=CPUUsage
+  - name: sort activity monitor results by cpu usage 2
+    osx_defaults: domain=com.apple.activitymonitor key=sortdirection type=int value=0
+
+  # Software updates
+  - name: Enable the automatic update check
+    osx_defaults: domain=com.apple.SoftwareUpdate key=AutomaticCheckEnabled type=bool value=true
+
+  - name: Check for software updates daily, not just once per week
+    osx_defaults: domain=com.apple.SoftwareUpdate key=ScheduleFrequency type=int value=1
+
+  - name: Download newly available updates in background
+    osx_defaults: domain=com.apple.SoftwareUpdate key=AutomaticDownload type=int value=1
+
+  - name: Install System data files & security updates
+    osx_defaults: domain=com.apple.SoftwareUpdate key=CriticalUpdateInstall type=int value=1
+
+  - name: Automatically download apps purchased on other Macs
+    osx_defaults: domain=com.apple.SoftwareUpdate key=ConfigDataInstall type=int value=1
+
+  - name: Turn on app auto-update
+    osx_defaults: domain=com.apple.commerce key=AutoUpdate type=bool value=true
+
+  - name: Allow the App Store to reboot machine on macOS updates
+    osx_defaults: domain=com.apple.commerce key=AutoUpdateRestartRequired type=bool value=true
+
+  # Photos
+  - name: Prevent Photos from opening automatically when devices are plugged in
+    osx_defaults: host=currentHost domain=com.apple.ImageCapture key=disableHotPlug type=bool value=true
+
+  # Chrome
+  - name: Use the system-native print preview dialog 1
+    osx_defaults: domain=com.google.Chrome.canary key=DisablePrintPreview type=bool value=true
+
+  - name: expand the print dialog by default
+    osx_defaults: domain=com.google.chrome.canary key=pmprintingexpandedstateforprint2 type=bool value=true
