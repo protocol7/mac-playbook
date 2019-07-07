@@ -73,6 +73,8 @@
         path: "/Applications/Spotify.app/"
       - name: Steam
         path: "/Applications/Steam.app/"
+      - name: WhatsApp
+        path: "/Applications/WhatsApp.app/"
 
   - name: Chrome as default
     shell: defaultbrowser chrome
