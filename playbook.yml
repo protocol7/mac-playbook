@@ -10,50 +10,50 @@
       url: git@ghe.spotify.net:shared/homebrew-spotify.git
   - name: homebrew
     homebrew:
-      name: "{{item}}"
+      name:
+        - ansible
+        - bash
+        - bat
+        - checkstyle
+        - clojure
+        - cmake
+        - cookiecutter
+        - dockutil
+        - dos2unix
+        - ghostscript # TWP
+        - git
+        - gnupg
+        - go
+        - google-java-format
+        - gradle
+        - graphviz
+        - grep
+        - grpcurl
+        - htop
+        - imagemagick # TWP
+        - jq
+        - kubectx
+        - leiningen
+        - macvim
+        - mas
+        - maven
+        - ngrep
+        - npm
+        - pandoc # TWP
+        - parallel
+        - pipenv
+        - pmd
+        - protobuf
+        - pstree
+        - reattach-to-user-namespace
+        - terraform
+        - tmux
+        - tree
+        - unrar
+        - watch
+        - wget
+        - yarn
       state: latest
-    with_items:
-      - bash
-      - bat
-      - checkstyle
-      - clojure
-      - cmake
-      - cookiecutter
-      - dockutil
-      - dos2unix
-      - ghostscript # TWP
-      - git
-      - gnupg
-      - go
-      - google-java-format
-      - gradle
-      - graphviz
-      - grep
-      - grpcurl
-      - htop
-      - imagemagick # TWP
-      - jq
-      - kubectx
-      - leiningen
-      - macvim
-      - mas
-      - maven
-      - ngrep
-      - npm
-      - pandoc # TWP
-      - parallel
-      - pipenv
-      - pmd
-      - protobuf
-      - pstree
-      - reattach-to-user-namespace
-      - terraform
-      - tmux
-      - tree
-      - unrar
-      - watch
-      - wget
-      - yarn
   - name: cask
     homebrew_cask:
       name: "{{item}}"
