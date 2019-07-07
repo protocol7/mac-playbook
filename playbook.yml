@@ -18,6 +18,7 @@
         - clojure
         - cmake
         - cookiecutter
+        - defaultbrowser
         - dockutil
         - dos2unix
         - ghostscript # TWP
@@ -447,3 +448,6 @@
         id: niloccemoadcdkdjlinkgdfekeahmflj
       - name: ublock
         id: cjpalhdlnbpafiamejdnhcphjbkeiagm
+
+  - name: Chrome - set as default browser
+    command: defaultbrowser canary
