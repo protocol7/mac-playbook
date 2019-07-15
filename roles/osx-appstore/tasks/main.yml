@@ -1,0 +1,9 @@
+---
+
+  - name: appstore list
+    command: mas list
+    register: mas_list
+  - name: appstore
+    command: mas install "{{item}}"
+    when: (item | string) not in mas_list.stdout
+    with_items: "{{ appstore_items }}"

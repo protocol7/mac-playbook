@@ -1,0 +1,16 @@
+---
+  # workaround pygame zero issue in Mojave
+  # https://stackoverflow.com/questions/52718921/problems-getting-pygame-to-show-anything-but-a-blank-screen-on-macos-mojave
+  - name: python 3.6 installed
+    shell: brew info python
+    register: python36_list
+  - name: python workaround
+    shell: brew unlink python && brew install --ignore-dependencies  https://raw.githubusercontent.com/Homebrew/homebrew-core/f2a764ef944b1080be64bd88dca9a1d80130c558/Formula/python.rb && brew switch python 3.7.4
+    when: '"3.6.5_1" not in python36_list.stdout'
+
+  - name: pgzero installed
+    shell: brew switch python 3.6.5_1 && pip3.6 list && brew switch python 3.7.4
+    register: pgzero_list
+  - name: pgzero
+    shell: brew switch python 3.6.5_1 && pip3.6 install pgzero && brew switch python 3.7.4
+    when: '"pgzero" not in pgzero_list.stdout'

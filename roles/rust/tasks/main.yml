@@ -1,0 +1,25 @@
+---
+
+  - name: rust
+    shell: curl https://sh.rustup.rs -sSf | sh -s -- -y
+    args:
+      creates: ~/.cargo/
+      warn: false
+  - name: rustup
+    shell: rustup update
+
+  - name: cargo list
+    command: cargo install --list
+    register: cargo_list
+  - name: cargo
+    command: cargo install "{{item}}"
+    when: (item | string) not in cargo_list.stdout
+    with_items: "{{ crates }}"
+
+  # update crates
+  - name: cargo update list
+    command: cargo install-update --all --list
+    register: cargo_update_list
+  - name: cargo-update
+    command: cargo install-update -a
+    when: '"Yes" in cargo_update_list.stdout'
