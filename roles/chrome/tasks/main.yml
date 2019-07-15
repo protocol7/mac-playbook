@@ -19,8 +19,9 @@
       dest: "~/Library/Application Support/Google/Chrome Canary/External Extensions/{{ item.id }}.json"
     with_items: "{{ chrome_extensions }}"
 
-  - name: homebrew
+  - name: Install defaultbrowser
     homebrew:
       name: defaultbrowser
+      state: latest
   - name: Chrome - set as default browser
     command: defaultbrowser canary

@@ -32,6 +32,7 @@
     - rust
     - chrome
     - pgzero
+    - video
   tasks:
     # Adding a tap for https://github.com/Homebrew/homebrew-cask-versions
   - name: cask-versions tap
@@ -94,7 +95,6 @@
       state: latest
     with_items:
       - 1password
-      - airflow
       - alfred
       - android-studio
       - bartender
@@ -117,7 +117,6 @@
       #- spotify
       - steam
       - transmission
-      - vlc
       - whatsapp
       - wireshark
 
