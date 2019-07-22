@@ -54,7 +54,6 @@
         - cookiecutter
         - dockutil
         - dos2unix
-        - ghostscript # TWP
         - git
         - gnupg
         - go
@@ -64,7 +63,6 @@
         - grep
         - grpcurl
         - htop
-        - imagemagick # TWP
         - jq
         - kubectx
         - leiningen
@@ -73,7 +71,6 @@
         - maven
         - ngrep
         - npm
-        - pandoc # TWP
         - parallel
         - pipenv
         - pmd
