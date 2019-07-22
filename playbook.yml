@@ -114,7 +114,7 @@
       - sb
       - slack
       - slate
-      #- spotify
+      - spotify
       - steam
       - transmission
       - whatsapp
