@@ -77,7 +77,7 @@
         - protobuf
         - pstree
         - reattach-to-user-namespace
-        - terraform
+        - tfenv
         - tmux
         - tree
         - unrar
