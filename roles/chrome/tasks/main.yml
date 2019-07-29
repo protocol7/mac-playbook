@@ -1,22 +1,22 @@
 ---
 
-    # Adding a tap for https://github.com/Homebrew/homebrew-cask-versions
+  # Adding a tap for https://github.com/Homebrew/homebrew-cask-versions
   - name: cask-versions tap
     homebrew_tap:
       name: homebrew/cask-versions
   - name: cask
     homebrew_cask:
-      name: google-chrome-canary
+      name: google-chrome-beta
       state: latest
 
   # Configure Chrome
   - name: Chrome extension dir
-    file: path="~/Library/Application Support/Google/Chrome Canary/External Extensions" state=directory
+    file: path="~/Library/Application Support/Google/Chrome/External Extensions" state=directory
 
   - name: Chrome extensions
     template:
       src: ../templates/chrome-extensions.json.j2
-      dest: "~/Library/Application Support/Google/Chrome Canary/External Extensions/{{ item.id }}.json"
+      dest: "~/Library/Application Support/Google/Chrome/External Extensions/{{ item.id }}.json"
     with_items: "{{ chrome_extensions }}"
 
   - name: Install defaultbrowser
@@ -24,4 +24,4 @@
       name: defaultbrowser
       state: latest
   - name: Chrome - set as default browser
-    command: defaultbrowser canary
+    command: defaultbrowser chrome
