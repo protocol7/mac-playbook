@@ -132,6 +132,10 @@
       name: spotify-developer-cli
       state: latest
       extra_args: --index-url=https://pypi.spotify.net/spotify/production --default-timeout=5
+  - pip:
+      name:
+        - yapf
+      executable: pip3
   - name: vundle
     git:
       repo: https://github.com/VundleVim/Vundle.vim.git
