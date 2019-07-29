@@ -278,3 +278,7 @@
     osx_defaults: domain=org.m0k.transmission key=DownloadAsk type=bool value=true
   - name: Don’t prompt for confirmation before downloading 2
     osx_defaults: domain=org.m0k.transmission key=MagnetOpenAsk type=bool value=true
+
+  # Alfred
+  - name: Alfred pref sync
+    osx_defaults: domain=com.runningwithcrayons.Alfred-Preferences-3 key=syncfolder value="~/Documents/alfred"
