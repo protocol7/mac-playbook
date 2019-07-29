@@ -147,8 +147,11 @@
       dest: ~/.tmux/plugins/tpm
 
   - gem:
-      name: travis
+      name: "{{item}}"
       state: latest
+    with_items:
+      - mdl
+      - travis
 
   # Checkout dotfiles
   - name: dotfiles checkout
