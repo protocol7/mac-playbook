@@ -121,6 +121,13 @@
   - name: gcloud beta
     shell: gcloud components install beta
 
+  - name: gcping
+    get_url:
+      url: https://storage.googleapis.com/gcping-release/gcping_darwin_amd64_0.0.1
+      dest: /usr/local/bin/gcping
+      checksum: sha1:16495ae3eb605f541fa3a2a4c002a8174b6678e7
+      mode: "0744"
+
   - name: npm
     npm:
       name: "{{item}}"
