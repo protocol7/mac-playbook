@@ -245,6 +245,9 @@
   - name: Show Library
     shell: chflags nohidden ~/Library
 
+  - name: Disable wake on Bluetooth
+    osx_defaults: host=currentHost domain=com.apple.Bluetooth key=RemoteWakeEnabled type=int value=0
+
   # OS X Dock
   - name: Automatically hide and show the Dock
     osx_defaults: domain=com.apple.dock key=autohide type=bool value=true
