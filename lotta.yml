@@ -29,13 +29,16 @@
     with_items:
       - Siri
       - Launchpad
+      - Mission Control
       - Mail
-      - Kontakter
-      - Kalender
-      - Påminnelser
-      - Kartor
-      - Bilder
+      - Contacts
+      - Calendar
+      - Reminders
+      - Maps
+      - Photos
+      - Photo Booth
       - iTunes
+      - Safari
 
   - name: dock additions
     shell: dockutil --find "{{item.name}}" || dockutil --add "{{item.path}}"
@@ -48,6 +51,8 @@
         path: "/Applications/Spotify.app/"
       - name: Steam
         path: "/Applications/Steam.app/"
+      - name: Roblox
+        path: "/Applications/Roblox.app/"
 
   - name: Chrome as default
     shell: defaultbrowser chrome
