@@ -141,6 +141,7 @@
       extra_args: --index-url=https://pypi.spotify.net/spotify/production --default-timeout=5
   - pip:
       name:
+        - yamllint
         - yapf
       executable: pip3
   - name: vundle
