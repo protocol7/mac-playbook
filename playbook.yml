@@ -279,6 +279,23 @@
   - name: Remove everything from dock
     shell: dockutil --remove all
 
+  # Touch bar
+  - name: Configure control strip
+    osx_defaults:
+      domain: com.apple.controlstrip
+      key: MiniCustomized
+      type: array
+      value:
+        - com.apple.system.brightness
+        - com.apple.system.media-play-pause
+        - com.apple.system.volume
+        - com.apple.system.mute
+    register: control_strip
+
+  - name: Restart control strip
+    command: killall ControlStrip
+    when: control_strip.changed
+
   # Transmission
   - name: Use `~/Downloads` to store completed downloads
     osx_defaults: domain=org.m0k.transmission key=DownloadLocationConstant type=bool value=true
