@@ -45,7 +45,6 @@
   - name: homebrew
     homebrew:
       name:
-        - ansible
         - bash
         - bat
         - checkstyle
