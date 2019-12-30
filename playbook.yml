@@ -76,6 +76,7 @@
         - protobuf
         - pstree
         - reattach-to-user-namespace
+        - ruby
         - tfenv
         - tmux
         - tree
