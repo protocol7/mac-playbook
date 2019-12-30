@@ -31,7 +31,6 @@
     - osx-appstore
     - rust
     - chrome
-    - pgzero
     - video
   tasks:
     # Adding a tap for https://github.com/Homebrew/homebrew-cask-versions
