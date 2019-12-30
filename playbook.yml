@@ -93,6 +93,7 @@
     with_items:
       - 1password
       - alfred
+      - android-messages
       - android-studio
       - bartender
       - daisydisk
