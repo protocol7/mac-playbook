@@ -106,6 +106,7 @@
       - java
       - java8
       - java11
+      - macmediakeyforwarder
       - polar-bookshelf
       - pomello
       - sb
