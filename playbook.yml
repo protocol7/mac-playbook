@@ -44,6 +44,7 @@
   - name: homebrew
     homebrew:
       name:
+        - asdf
         - bash
         - bat
         - checkstyle
@@ -79,6 +80,7 @@
         - ruby
         - tfenv
         - tmux
+        - tmux-xpanes
         - tree
         - unrar
         - watch
@@ -93,9 +95,11 @@
     with_items:
       - 1password
       - alfred
+      - altair-graphql-client
       - android-messages
       - android-studio
       - bartender
+      - bitbar
       - daisydisk
       - deckset
       - docker
@@ -103,14 +107,12 @@
       - google-backup-and-sync
       - intellij-idea-ce
       - iterm2-beta
-      - java
-      - java8
-      - java11
       - kindle
       - macmediakeyforwarder
       - polar-bookshelf
       - pomello
       - sb
+      - signal
       - slack-beta
       - slate
       - spotify
@@ -118,6 +120,7 @@
       - transmission
       - whatsapp
       - wireshark
+      - visual-studio-code
 
   - name: gcloud
     shell: gcloud components update
